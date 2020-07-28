@@ -1,0 +1,22 @@
+[package]
+name = "es-exporter-rs"
+version = "1.0.0"
+authors = ["Mario Zupan <mario@zupzup.org>"]
+edition = "2018"
+
+[dependencies]
+tokio = { version = "0.2", features = ["macros", "rt-threaded", "time"] }
+warp = "0.2"
+prometheus = { version = "0.9", features = ["process"] }
+lazy_static = "1.4"
+futures = { version = "0.3", default-features = false }
+rand = "0.7"
+
+[profile.dev]
+debug = 0
+
+[profile.test]
+debug = 0
+
+[profile.release]
+panic = 'abort'

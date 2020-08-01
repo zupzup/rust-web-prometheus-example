@@ -6,7 +6,7 @@ Build prometheus with:
 
 ```bash
 cd prom
-docker build -t prometheus
+docker build -t prometheus .
 ```
 
 Run it with:

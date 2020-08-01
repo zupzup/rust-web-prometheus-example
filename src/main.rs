@@ -78,7 +78,7 @@ async fn data_collector() {
         let mut rng = thread_rng();
         let response_time: f64 = rng.gen_range(0.001, 10.0);
         let response_code: usize = rng.gen_range(100, 599);
-        let env_index: usize = rng.gen_range(0, 1);
+        let env_index: usize = rng.gen_range(0, 2);
 
         track_status_code(response_code, ENVS.get(env_index).expect("exists"));
         track_request_time(response_time, ENVS.get(env_index).expect("exists"))
